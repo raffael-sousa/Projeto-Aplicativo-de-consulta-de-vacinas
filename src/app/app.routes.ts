@@ -10,4 +10,16 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'children',
+    loadComponent: () => import('./children/children.page').then( m => m.ChildrenPage)
+  },
+  {
+    path: 'child-detail',
+    loadComponent: () => import('./child-detail/child-detail.page').then( m => m.ChildDetailPage)
+  },
+  {
+    path: 'campaigns',
+    loadComponent: () => import('./campaigns/campaigns.page').then( m => m.CampaignsPage)
+  },
 ];
