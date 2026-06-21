@@ -12,8 +12,8 @@
     <ion-item *ngFor="let vacina of selectedChild.vacinas"
     style="border: 2px solid var(--marrom);">
       <ion-label>
-       {{ vacina.name }}
-       <p [style.color]="vacina.status == 'Em dia' ? 'var(--verde)' : vacina.status == 'Pendente' ? 'var(--amarelo)' : 'var(--laranja)'" >
+       <p class="name">{{ vacina.name }}</p>
+       <p class="status" [style.color]="vacina.status == 'Em dia' ? 'var(--verde)' : vacina.status == 'Pendente' ? 'var(--amarelo)' : 'var(--laranja)'" >
          {{ vacina.status }}
        </p>
       </ion-label>

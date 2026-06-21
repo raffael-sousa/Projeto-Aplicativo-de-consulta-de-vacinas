@@ -36,3 +36,7 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
 
+ion-content {
+  --padding-start: 12px;
+  --padding-end: 12px;
+}
