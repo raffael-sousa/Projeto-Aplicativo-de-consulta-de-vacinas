@@ -4,7 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <h2>ID da Criança:</h2>
-  <p>{{ childId }}</p>
+<ion-content class="ion-padding" *ngIf="selectedChild">
+  <h2>{{ selectedChild.name }}</h2>
+  <p>{{ selectedChild.age }} anos</p>
+
+  <ion-list>
+    <ion-item *ngFor="let vacina of selectedChild.vacinas">
+      <ion-label>
+       {{ vacina.name }} - {{ vacina.status }}>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
 </ion-content>

@@ -13,12 +13,55 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ChildDetailPage implements OnInit {
   childId: string | null = null;
+  children = [ 
+    {
+      id: 1,
+      name: 'Maria Clara',
+      age: 1,
+      vacinas: [
+        {name: 'BCG', status: 'Tomada em 10-02-2025'},
+        {name: 'Hepatite B', status: 'Tomada em 10-02-2025'},
+        {name: 'Triplice Viral', status: 'Tomada em 10-02-2026'},
+        {name: 'Pneumococica 10-valente', status: 'Tomada em 10-02-2026'},
+        {name: 'Meningocócica C', status: 'Tomada em 10-02-2026'}
+      ]
+    },
+    {
+      id: 2,
+      name: 'José Pedro',
+      age: 5,
+      vacinas: [
+        {name: 'BCG', status: 'Tomada em 16-03-2021'},
+        {name: 'Hepatite B', status: 'Tomada em 16-03-2021'},
+        {name: 'Triplice Viral', status: 'Atrasada desde 16-03-2022'},
+        {name: 'Pneumococica 10-valente', status: 'Tomada em 16-03-2022'},
+        {name: 'Meningocócica C', status: 'Tomada em 16-03-2022'}
+      ]
+    },
+    {
+      id: 3,
+      name: 'Alice Lima',
+      age: 3,
+      vacinas: [
+        {name: 'BCG', status: 'Tomada em 05-05-2023'},
+        {name: 'Hepatite B', status: 'Tomada em 05-05-2023'},
+        {name: 'Triplice Viral', status: 'Tomada em 05-05-2023'},
+        {name: 'Pneumococica 10-valente', status: 'Tomada em 05-05-2023'},
+        {name: 'Meningocócica C', status: 'Tomada em 05-05-2023'},
+        {name: 'DTP', status: 'Pendente'}
+      ]
+    }
+  ]
+
+  selectedChild: any = null;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.childId = this.route.snapshot.paramMap.get('id');
-    console.log('ID da Criança:', this.childId);
+    const id = Number(this.childId);
+    this.selectedChild = this.children.find(child => child.id === id);
+    console.log(this.selectedChild);
   }
 
 }

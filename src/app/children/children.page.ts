@@ -14,15 +14,20 @@ import { RouterLink } from '@angular/router';
 export class ChildrenPage implements OnInit {
 
   children = [
-    { id: 1, 
-      name: 'José Pedro', 
-      age: 5,
+    { id: 1,
+      name: 'Maria Clara',
+      age: 1,
       status: 'Vacinas em dia'
     },
-    { id: 2,
-      name: 'Luciana Ramos',
+    { id: 2, 
+      name: 'José Pedro', 
       age: 5,
-      status: 'Pendente BCG'
+      status: 'Atrasada Triplice Viral'
+    },
+    { id: 3,
+      name: 'Alice Lima',
+      age: 3,
+      status: 'Pendente DTP'
     }
   ];
   constructor() { }
