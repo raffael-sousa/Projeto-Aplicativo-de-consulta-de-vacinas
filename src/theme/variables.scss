@@ -4,3 +4,10 @@
   --laranja: #FDA769;
   --marrom: #473C33;
 }
+
+@media (min-width: 768px) {
+  ion-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
