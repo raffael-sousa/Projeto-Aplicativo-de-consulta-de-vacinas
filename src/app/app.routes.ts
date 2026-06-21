@@ -15,7 +15,7 @@ export const routes: Routes = [
     loadComponent: () => import('./children/children.page').then( m => m.ChildrenPage)
   },
   {
-    path: 'child-detail',
+    path: 'child-detail/:id',
     loadComponent: () => import('./child-detail/child-detail.page').then( m => m.ChildDetailPage)
   },
   {
