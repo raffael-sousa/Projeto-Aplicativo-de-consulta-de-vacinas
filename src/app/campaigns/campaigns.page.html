@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar style="--background: var(--marrom); --color: white;">
     <ion-title>Campanhas de Vacinação</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,12 +7,14 @@
 <ion-content class="ion-padding">
 
   <ion-list>
-    <ion-item *ngFor="let c of campaigns">
+    <ion-item *ngFor="let c of campaigns" style="border: 2px solid var(--marrom);">
       <ion-label>
         <h2>{{ c.titulo }}</h2>
         <p>{{ c.alvo }}</p>
         <p>{{ c.descricao}}</p>
-        <p>{{c.status}}</p>
+        <p [style.color]="c.status === 'Ativa' ? 'var(--verde)' : 'var(--laranja)'" >
+          {{c.status}}
+        </p>
       </ion-label>
     </ion-item>
   </ion-list>
