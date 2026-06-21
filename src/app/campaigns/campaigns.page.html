@@ -1,13 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>campaigns</ion-title>
+    <ion-title>Campanhas de Vacinação</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">campaigns</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+
+  <ion-list>
+    <ion-item *ngFor="let c of campaigns">
+      <ion-label>
+        <h2>{{ c.titulo }}</h2>
+        <p>{{ c.alvo }}</p>
+        <p>{{ c.descricao}}</p>
+        <p>{{c.status}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

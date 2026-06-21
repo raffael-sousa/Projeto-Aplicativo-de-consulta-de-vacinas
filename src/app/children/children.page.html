@@ -1,24 +1,37 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Crianças</ion-title>
+<ion-toolbar style="--background: var(--marrom); --color: white;">
+    <ion-title>Gerenciar Crianças</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
 
-  <ion-button expand="block">
+<ion-button expand="block" style="--background: var(--verde);">
     Adicionar Criança
   </ion-button>
 
   <ion-list>
-    
-    <ion-item button *ngFor="let child of children" [routerLink]="['/child-detail', child.id]">
-     <ion-label>
-      <h2>{{ child.name }}</h2>
-      <p>{{ child.age }} ano(s) - {{ child.status }}</p>
-     </ion-label>
+    <ion-item button *ngFor="let child of children" [routerLink]="['/child-detail', child.id]"
+    style="border: 2px solid var(--marrom);">
+      <ion-label>
+        <h2>{{ child.name }}</h2>
+        <p>{{ child.age }} ano(s)</p>
+
+        <p [style.color]="child.status.includes('Atrasada') 
+          ? 'var(--laranja)'
+          : child.status.includes('Pendente')
+          ? 'var(--amarelo)'
+          : 'var(--verde)'">
+          {{ child.status }}
+        </p>     
+      </ion-label>
     </ion-item>
 
   </ion-list>
 
+  <ion-button expand="block" routerLink="/campaigns" style="--background: var(--marrom);"
+  style="--background:var(--verde)">
+    Ver Campanhas de Vacinação
+  </ion-button>
 </ion-content> 
+

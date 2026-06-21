@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ChildrenPage implements OnInit {
 
-  children = [
+  children = [ 
     { id: 1,
       name: 'Maria Clara',
       age: 1,
