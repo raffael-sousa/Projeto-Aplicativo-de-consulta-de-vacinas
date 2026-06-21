@@ -6,12 +6,12 @@
 
 <ion-content class="ion-padding" *ngIf="selectedChild">
   <h2>{{ selectedChild.name }}</h2>
-  <p>{{ selectedChild.age }} anos</p>
+  <p>{{ selectedChild.age }} ano(s)</p>
 
   <ion-list>
     <ion-item *ngFor="let vacina of selectedChild.vacinas">
       <ion-label>
-       {{ vacina.name }} - {{ vacina.status }}>
+       {{ vacina.name }} - {{ vacina.status }}
       </ion-label>
     </ion-item>
   </ion-list>

@@ -19,11 +19,11 @@ export class ChildDetailPage implements OnInit {
       name: 'Maria Clara',
       age: 1,
       vacinas: [
-        {name: 'BCG', status: 'Tomada em 10-02-2025'},
-        {name: 'Hepatite B', status: 'Tomada em 10-02-2025'},
-        {name: 'Triplice Viral', status: 'Tomada em 10-02-2026'},
-        {name: 'Pneumococica 10-valente', status: 'Tomada em 10-02-2026'},
-        {name: 'Meningocócica C', status: 'Tomada em 10-02-2026'}
+        {name: 'BCG', status: 'Em dia'},
+        {name: 'Hepatite B', status: 'Em dia'},
+        {name: 'Triplice Viral', status: 'Em dia'},
+        {name: 'Pneumococica 10-valente', status: 'Em dia'},
+        {name: 'Meningocócica C', status: 'Em dia'}
       ]
     },
     {
@@ -31,11 +31,11 @@ export class ChildDetailPage implements OnInit {
       name: 'José Pedro',
       age: 5,
       vacinas: [
-        {name: 'BCG', status: 'Tomada em 16-03-2021'},
-        {name: 'Hepatite B', status: 'Tomada em 16-03-2021'},
-        {name: 'Triplice Viral', status: 'Atrasada desde 16-03-2022'},
-        {name: 'Pneumococica 10-valente', status: 'Tomada em 16-03-2022'},
-        {name: 'Meningocócica C', status: 'Tomada em 16-03-2022'}
+        {name: 'BCG', status: 'Em dia'},
+        {name: 'Hepatite B', status: 'Em dia'},
+        {name: 'Triplice Viral', status: 'Atrasada'},
+        {name: 'Pneumococica 10-valente', status: 'Em dia'},
+        {name: 'Meningocócica C', status: 'Em dia'}
       ]
     },
     {
@@ -43,11 +43,11 @@ export class ChildDetailPage implements OnInit {
       name: 'Alice Lima',
       age: 3,
       vacinas: [
-        {name: 'BCG', status: 'Tomada em 05-05-2023'},
-        {name: 'Hepatite B', status: 'Tomada em 05-05-2023'},
-        {name: 'Triplice Viral', status: 'Tomada em 05-05-2023'},
-        {name: 'Pneumococica 10-valente', status: 'Tomada em 05-05-2023'},
-        {name: 'Meningocócica C', status: 'Tomada em 05-05-2023'},
+        {name: 'BCG', status: 'Em dia'},
+        {name: 'Hepatite B', status: 'Em dia'},
+        {name: 'Triplice Viral', status: 'Em dia'},
+        {name: 'Pneumococica 10-valente', status: 'Em dia'},
+        {name: 'Meningocócica C', status: 'Em dia'},
         {name: 'DTP', status: 'Pendente'}
       ]
     }
